@@ -9,7 +9,7 @@ git submodule update
 # local.conf won't exist until this step on first execution
 source poky/oe-init-build-env
 
-LOCAL_CONF_FILE=conf/test_local.conf
+LOCAL_CONF_FILE=conf/local.conf
 
 CONFLINE="MACHINE = \"raspberrypi4-64\""
 
