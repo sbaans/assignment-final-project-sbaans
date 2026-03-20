@@ -1,2 +1,3 @@
-# yocto-assignments-base
-Base repository for AESD Yocto assignments
+
+**PROJECT OVERVIEW:**
+https://github.com/sbaans/assignment-final-project-sbaans/wiki/Project-Overview
