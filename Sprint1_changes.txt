@@ -1,0 +1,33 @@
+Sprint 1 changes :
+
+Compile :
+
+. poky/oe-init-build-env
+
+bitbake core-image-minimal
+
+take the .wic.bz2 to flash on sd card
+
+
+CONFIG_SND_USB_AUDIO=y
+
+is in android-drivers.cfg
+
+Script to launch during init :
+
+if test -z "$DBUS_SESSION_BUS_ADDRESS" ; then
+     echo "Starting dbus" 
+     export $(dbus-launch)
+fi
+
+In etc/pulse/client.conf, enable allow-autospawn-for-root = yes
+
+Then :
+
+launch pulseaudio:
+
+pulseaudio -D --disallow-exit
+
+Mount USB Key with tel.wav file and play it :
+
+aplay /media/usb/tel.wav
