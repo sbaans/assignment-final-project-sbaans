@@ -14,4 +14,4 @@ jobs:
           - name: Checkout submodules
             run : git submodule update --init --recursive
           - name: Run full test
-            run: ./full-test.sh
+            run: ./build_audio_app.sh
