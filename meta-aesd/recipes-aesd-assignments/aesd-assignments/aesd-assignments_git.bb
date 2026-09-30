@@ -13,11 +13,15 @@ S = "${WORKDIR}"
 
 inherit update-rc.d
 
+INITSCRIPT_NAME = "startdbus"
+INITSCRIPT_PARAMS = "defaults"
+INITSCRIPT_PACKAGES = "${PN}"
 
 do_install () {
-	install -m 0755 ${WORKDIR}/startdbus.sh ${D}/etc/init.d/startdbus.sh
+	install -d ${D}${sysconfdir}/init.d
+	install -m 0755 ${WORKDIR}/startdbus.sh ${D}${sysconfdir}/init.d/startdbus
 }
 
-INITSCRIPT_NAME = "startdbus"
 
-FILES:${PN} = "/etc/init.d/startdbus.sh"
+
+FILES:${PN} += "${sysconfdir}/init.d/startdbus"
