@@ -1,0 +1,1 @@
+CORE_IMAGE_EXTRA_INSTALL += "aesd-assignments"

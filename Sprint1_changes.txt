@@ -31,3 +31,17 @@ pulseaudio -D --disallow-exit
 Mount USB Key with tel.wav file and play it :
 
 aplay /media/usb/tel.wav
+
+
+
+
+To record : 
+
+root@raspberrypi4-64:~# arecord -l
+**** List of CAPTURE Hardware Devices ****
+card 2: USB [Scarlett Solo USB], device 0: USB Audio [USB Audio]
+  Subdevices: 1/1
+  Subdevice #0: subdevice #0
+  
+  
+  
