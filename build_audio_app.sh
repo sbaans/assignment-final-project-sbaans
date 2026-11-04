@@ -4,4 +4,4 @@
 
 cd meta-aesd/audio_app
 make clean
-make audio_app
+make CI_SYSROOT=$(pwd)/ci-sysroot audio_app

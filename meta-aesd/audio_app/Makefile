@@ -2,6 +2,11 @@ CFLAGS = -g -Wall -Werror
 LDFLAGS = -pthread
 LDLIBS += -lasound
 
+ifdef CI_SYSROOT
+CFLAGS += -I$(CI_SYSROOT)/usr/include
+LDFLAGS += -L$(CI_SYSROOT)/usr/lib
+endif
+
 all: audio_app
 
 default: audio_app
