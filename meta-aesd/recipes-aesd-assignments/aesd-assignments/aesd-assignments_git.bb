@@ -4,6 +4,7 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 FILESEXTRAPATHS:prepend := "${THISDIR}/../../audio_app:"
 SRC_URI = "file://startdbus.sh file://Makefile file://audio_app.c"
+DEPENDS += "alsa-lib"
 
 PV = "1.0+git${SRCPV}"
 
